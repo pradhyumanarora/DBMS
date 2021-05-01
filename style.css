@@ -2,7 +2,7 @@ body{
     margin: 0; padding: 0;
     height : 100%;
     /* padding: 10; */
-    background: url("/DBMS project/images/backg9.jpg");
+    background: url("/images/backg9.jpg");
     background-size: cover;
     font-family: Times;
     overflow : hidden ;
