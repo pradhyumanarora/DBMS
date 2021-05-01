@@ -1,0 +1,148 @@
+body{
+    margin: 0; padding: 0;
+    height : 100%;
+    /* padding: 10; */
+    background: url("/DBMS project/images/backg9.jpg");
+    background-size: cover;
+    font-family: Times;
+    overflow : hidden ;
+    /* border: 3px solid red; */
+    
+}
+
+
+.title{
+    position: relative;
+    /* border: 3px solid red; */
+    height : 150px;
+    /* width: 100%;  */
+    padding-top: 25px;
+}
+.title img{
+    /* border: 3px solid red; */
+    height: 110px;
+    display: block;
+    position: relative;
+    /* top: 50%; */
+    /* top: 50%; */
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+
+.login_box{
+    /* border: 3px solid red; */
+    padding-top: 40px;
+    padding-bottom: 2px;
+    padding-right: 5;
+    padding-left: 5;
+    top : 55%;
+    left : 50%;
+    width: 320px;
+    background : black;
+    position : absolute;
+    transform: translate(-50%,-50%) ;
+    color : white ;
+    text-align: center;
+    border-radius : 20px;
+}
+
+.login_box h3{
+    font-family: cursive ;
+    font-size: 22px;
+    text-align: center;
+    padding : 0px 10px 10px 10px;
+    border-bottom: 5px solid rgb(4, 221, 4);
+}
+
+.login_box form{
+    position: center;
+    padding : 0 20px 0 20px;
+    box-sizing: border-box;
+
+}
+
+form .txtbox{
+    position : center ;
+    /* border-bottom: 3px gold; */
+    /* margin: 10px; */
+    font-size: 14px;
+    color:rgb(4, 221, 4);
+}
+
+.txtbox{
+    height: 12px;
+    font-size: 10px;
+    width: 200px;
+    padding : 10px 10px 10px 10px;
+    border : none;
+    background: none;
+    /* color: rgb(4, 221, 4); */
+    text-align: center;
+    margin : -5px 10px 20px 10px;
+
+}
+
+
+
+.forgot{
+    margin: -5px 0 20px 5px;
+    color: grey;
+    font-weight: 600;
+    cursor: pointer;
+}
+.forgot:hover{
+    text-decoration: underline red;
+    color: red;
+}
+
+input[type="submit"]{
+    margin: -5px 0 20px 5px;
+    width: 100px;
+    height: 40px;
+    border: 3px solid rgb(4, 221, 4);
+    border-radius: 30px;
+    background: black;
+    color: rgb(4, 221, 4);
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Times;
+    cursor: pointer;
+    /* outline: none; */
+}
+input[type="submit"]:hover{
+    transition: .4s;
+    background: rgb(4, 221, 4);
+    color: black;
+    font-weight: 600;
+}
+
+footer{
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background : transparent;
+    height: 25px;
+    width: 100%;
+    /* font-family: cursive; */
+    /* padding-top: 2px; */
+    color: rgb(4, 221, 4);
+    /* border: 3px solid red; */
+
+
+}
+
+.footer-content{
+    position: absolute; bottom : 0; left: 50%;
+    text-align: center;
+    /* border: 3px solid red; */
+    font-size: 18px;
+    color: white;
+    font-family: 'Times New Roman';
+    font-weight: 600;
+    text-transform: capitalize;
+    word-spacing: 5px;
+    left: 0; margin-left: auto;
+    right: 0; margin-right: auto;
+}
+
