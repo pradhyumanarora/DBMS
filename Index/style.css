@@ -2,14 +2,14 @@ body{
     margin: 0; padding: 0;
     height : 100%;
     /* padding: 10; */
-    background: url("/images/backg9.jpg");
-    background-size: cover;
+    background: url("./images/backg9.jpg");
+    /* background-size: cover; */
     font-family: Times;
     overflow : hidden ;
     /* border: 3px solid red; */
     
 }
-
+/* HArd Reload- ctrl+shft+r */
 
 .title{
     position: relative;
@@ -121,8 +121,8 @@ input[type="submit"]:hover{
 footer{
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    background : transparent;
-    height: 25px;
+    background : black;
+    height: 30px;
     width: 100%;
     /* font-family: cursive; */
     /* padding-top: 2px; */
