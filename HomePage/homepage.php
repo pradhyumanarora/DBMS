@@ -25,7 +25,7 @@
             <img src="images/VASP title red.png" alt="Error Logo image" height="55px">
         </div>
         <div class="right">
-            <button class="b1">Logout</button>
+            <button class="b1"><a href = "./signout.php">Logout</a></button>
         </div>
     </header>
     <div class="navbar">

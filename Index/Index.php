@@ -3,13 +3,13 @@ $servername="localhost";
 $username = "root";
 $password = "";
 $dbname = "login";
-
+$error="";
 try{
     /*$this->_pdo = new PDO("mysql:host=".config::get('mysql/host').";dbname=".config::get('mysql/database') ,config::get('mysql/user'),config::get('mysql/password'));*/
     $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
 
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected Successfully";
+    //echo "Connected Successfully";
     $name = $password = $nameErr = $passwordErr = $error = "";
 
     if($_SERVER['REQUEST_METHOD']=="POST"){
@@ -28,28 +28,32 @@ try{
         else{
             $password=test_input($_POST["password"]);
         }
-        echo "Iiii0";
 
     }
-    echo " --------------";
-    echo "$passwordErr";
-    echo "$nameErr";
-    echo " --------------";
+    // echo " --------------";
+    // echo "$passwordErr";
+    // echo "$nameErr";
+    // echo " --------------";
     
     if(empty($nameErr)&&empty($passwordErr)){
-        //echo "AAAAA";
 
         $stmt=$conn->query("SELECT id from `user` where name='$name' and password='$password';");
-        //echo "AAAAA1111";
         if($stmt->execute()){
-            if($stmt->rowcount()==1){
-                session_start();
-                $_SESSION["name"]=$name;
-                header("location: ../HomePage/homepage.php");
+            if(isset($_POST['submit'])){
+
+                if($stmt->rowcount()==1){
+                    session_start();
+                    $_SESSION["name"]=$name;
+                    header("location: ../HomePage/homepage.php");
+                    $error="";
+                }
+                else{
+                    //$_SESSION["error"]=$error;
+                    $error="Invalid Username/Password";
+                    //header("location: ./Index.php");
+                }
             }
-            else{
-                $error="username or password didn't match";
-            }
+                
         }
     }
 
@@ -107,7 +111,15 @@ function test_input($data){
             <div>
                 <input type="submit" name="submit" value="Sign in">
             </div>
-            <br>
+            <!-- <br> -->
+            <div class="error">
+                <!-- <p> -->
+                    <?php
+                    echo $error;
+                    ?>
+                <!-- </p> -->
+            </div>
+
             <div class="forgot">
                 Forgot Password ?
             </div>
@@ -121,6 +133,7 @@ function test_input($data){
             <span>Copyright &copy;. VASP and co. All rights reserved.</span>
         </div>
     </footer>
+<?php $conn=null; ?>
 </body>
 
 </html>

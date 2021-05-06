@@ -27,6 +27,9 @@ header{
     right: 10px;
     top: 12px;
 }
+.right a{
+    text-decoration: none;
+}
 .b1{
     /* border: red solid 2px; */
     background: rgb(51, 155, 252);
